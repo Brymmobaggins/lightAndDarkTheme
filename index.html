@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing+Script|Lato&display=swap"
+      rel="stylesheet"
+    />
+    <title>light-dark mode</title>
+  </head>
+  <body>
+    <div class="toggle-btn">
+      <i class="fas fa-adjust"></i>
+    </div>
+    <section>
+      <div class="container">
+        <div class="content">
+          <div class="content-image">
+            <img
+              src="/images/man-in-white-tank-top-holding-an-exercise-equipment-3888416.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="content-text">
+            <h1 class="title">The Fatherhood Within</h1>
+            <h2 class="subtitle">Express your love as father</h2>
+            <p class="paragraph">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
+              recusandae repellenduscccccccc saep
+            </p>
+            <p class="paragraph">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
+              recellendus saepe ut quia et voluptas quos sint voluptate
+            </p>
+            <a href="#" class="cta">Learn more &rAarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      let body = document.body;
+      let toggleBtn = document.querySelector(".toggle-btn");
+      let currentTheme = localStorage.getItem("currentTheme");
+
+      if (currentTheme) {
+        body.classList.add("dark-theme");
+      }
+      toggleBtn.addEventListener("click", function () {
+        body.classList.toggle("dark-theme");
+
+        if (body.classList.contains("dark-theme")) {
+          localStorage.setItem("currentTheme", "themeActive");
+        } else {
+          localStorage.removeItem("currentTheme");
+        }
+      });
+    </script>
+  </body>
+</html>
